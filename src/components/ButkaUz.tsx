@@ -343,7 +343,7 @@ function ButkaUz() {
                             </div>
 
                         </CTAButton>
-                        <CTAButton href="https://t.me/food_truck_uz" variant="outline">
+                        <CTAButton href="https://t.me/butkadokonlaruz" variant="outline">
                             Batafsil Ma'lumot
                         </CTAButton>
                     </motion.div>
@@ -411,10 +411,10 @@ function ButkaUz() {
 
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12'>
                             {[
-                                "https://youtube.com/embed/eExIGfpaO9Q",
-                                "https://youtube.com/embed/Uo982-Es-C4",
-                                "https://youtube.com/embed/l59HBXW_ykg",
-                                "https://youtube.com/embed/3tHzxlx-m8U"
+                                "https://youtube.com/embed/PqgI87hyUfw",
+                                "https://youtube.com/embed/8UJlbhrDiOc",
+                                "https://youtube.com/embed/f-veRHzlm3Q",
+                                "https://youtube.com/embed/RrN-m6NACQU"
                             ].map((src, index) => (
                                 <motion.iframe
                                     key={src}
@@ -437,7 +437,7 @@ function ButkaUz() {
                             className="text-center"
                             whileHover={{ scale: 1.02 }}
                         >
-                            <CTAButton href="https://www.youtube.com/@KontainerCityUz" variant="primary">
+                            <CTAButton href="https://www.youtube.com/@butka.dokonlar_uz" variant="primary">
                                 Barcha ishlarni ko'rish
                             </CTAButton>
                         </motion.div>
@@ -790,16 +790,16 @@ function ButkaUz() {
                                 >
                                     <InfoCard variant="accent" className="h-full">
                                         <h3 className="text-3xl font-bold text-navy-800 mb-8 text-center">
-                                            Bizning joylashuvimiz
+                                            <span className='flex items-center'><MapPin className="w-7 h-7 text-indigo-600 ml-9 md:ml-[130px]" /> Bizning</span> joylashuvimiz
                                         </h3>
 
                                         <div className="flex items-start gap-6 p-6 bg-white/90 rounded-2xl shadow-lg">
-                                            <div className="p-4 bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-2xl flex-shrink-0 shadow-lg">
-                                                <MapPin className="w-7 h-7 text-white" />
-                                            </div>
+                                            {/* <div className="p-4 bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-2xl flex-shrink-0 shadow-lg">
+
+                                            </div> */}
                                             <div>
-                                                <p className="font-bold text-navy-800 mb-4 text-lg">Fabrika manzili</p>
-                                                <div className="text-slate-600 leading-relaxed space-y-2">
+                                                <p className="font-bold text-navy-800 mb-1 text-lg">Fabrika manzili</p>
+                                                <div className="text-slate-600">
                                                     <p className="font-semibold">Toshkent shahar, Yangihayot tumani</p>
                                                     <p>Metro: Turon bekat</p>
                                                     <p>Index bozor chorraxasi</p>
@@ -819,13 +819,13 @@ function ButkaUz() {
                                 viewport={{ once: true }}
                             >
                                 <h3 className="text-2xl font-bold text-navy-800 mb-8">
-                                    Biznesingizni keyingi bosqichga olib chiqishga tayyormisiz?
+                                    Biznesingizni <span className='text-indigo-600'>Butka Do'kon</span> bilan keyingi bosqichga olib chiqing
                                 </h3>
                                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                                     <CTAButton href="tel:+998787777557" variant="primary">
                                         <div className='flex gap-1 items-center'>
                                             <Phone className="w-6 h-6" />
-                                            Hoziroq buyurtma bering
+                                            Buyurtma bering
                                         </div>
                                     </CTAButton>
                                     <CTAButton href="https://t.me/kontainer_city" variant="outline">
