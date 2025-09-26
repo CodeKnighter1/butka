@@ -173,7 +173,7 @@ const CTAButton: React.FC<{
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center justify-center space-x-3 px-3 md:p-6 py-3 rounded-2xl font-semibold text-lg transition-all duration-300 ${variants[variant]}`}
+            className={`inline-flex items-center justify-center space-x-3 px-3 md:px-5 py-3 rounded-2xl font-semibold text-lg transition-all duration-300 ${variants[variant]}`}
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
         >
