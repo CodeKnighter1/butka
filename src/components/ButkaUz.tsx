@@ -515,7 +515,7 @@ function ButkaUz() {
                     <InfoCard variant="accent">
                         <SectionHeader variant="primary" className="flex items-center justify-center gap-4">
                             <TrendingUp className="w-16 h-16 text-blue-600" />
-                            Bizning asosiy afzalliklarimiz
+                            Butka Do'konning asosiy afzalliklarimiz
                         </SectionHeader>
 
                         <div className="grid md:grid-cols-2 gap-10">
