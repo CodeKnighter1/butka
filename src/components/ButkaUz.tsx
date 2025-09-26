@@ -132,8 +132,8 @@ const InfoCard: React.FC<InfoCardProps> = ({
 
     const variantClasses = {
         default: "bg-white/90 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-blue-100/50 p-8",
-        gradient: "bg-gradient-to-br from-white/95 via-blue-50/30 to-slate-50/40 backdrop-blur-md shadow-2xl hover:shadow-blue-200/20 border border-blue-100/30 p-10",
-        accent: "bg-gradient-to-br from-blue-50/80 to-white/90 backdrop-blur-sm shadow-xl hover:shadow-blue-200/25 border border-blue-200/30 p-8",
+        gradient: "bg-gradient-to-br from-white/95 via-blue-50/30 to-slate-50/40 backdrop-blur-md shadow-2xl hover:shadow-blue-200/20 border border-blue-100/30 p-6 lg:p-10",
+        accent: "bg-gradient-to-br from-blue-50/80 to-white/90 backdrop-blur-sm shadow-xl hover:shadow-blue-200/25 border border-blue-200/30 p-3 lg:p-6",
         glass: "bg-white/20 backdrop-blur-lg shadow-xl border border-white/30 hover:bg-white/30 p-8",
         navy: "bg-gradient-to-br from-navy-800 to-blue-900 text-white shadow-2xl hover:shadow-blue-900/30 p-10"
     };
@@ -173,7 +173,7 @@ const CTAButton: React.FC<{
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center justify-center space-x-3 px-6 py-3 rounded-2xl font-semibold text-lg transition-all duration-300 ${variants[variant]}`}
+            className={`inline-flex items-center justify-center space-x-3 px-3 md:p-6 py-3 rounded-2xl font-semibold text-lg transition-all duration-300 ${variants[variant]}`}
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
         >
@@ -275,7 +275,7 @@ function ButkaUz() {
             <AnimatedBackground />
             <ScrollToTop />
 
-            <div className="container mx-auto relative z-10 px-6">
+            <div className="container mx-auto relative z-10 px-3 md:px-6">
                 {/* Hero Section */}
                 <motion.div
                     className="text-center py-20 mt-8"
@@ -577,7 +577,7 @@ function ButkaUz() {
                             ].map((faq, index) => (
                                 <motion.div
                                     key={index}
-                                    className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-l-6 border-blue-500"
+                                    className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl border-l-6 border-blue-500"
                                     initial={{ opacity: 0, y: 40 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1, duration: 0.6 }}
@@ -671,7 +671,7 @@ function ButkaUz() {
                             Bizning <span className="text-blue-600">Yutuqlarimiz</span>
                         </SectionHeader>
 
-                        <div className="grid md:grid-cols-3 gap-10 mb-16">
+                        {/* <div className="grid md:grid-cols-3 gap-10 mb-16">
                             {[
                                 { icon: TrendingUp, label: "Yillik o'sish sur'ati", value: "25%+", color: "from-blue-500 to-blue-600" },
                                 { icon: Award, label: "2025-yil rejasi", value: "1000+", color: "from-indigo-600 to-indigo-500" },
@@ -696,7 +696,7 @@ function ButkaUz() {
                                     </motion.div>
                                 );
                             })}
-                        </div>
+                        </div> */}
 
                         <motion.div
                             className="space-y-8 text-slate-700 leading-relaxed text-lg"
@@ -717,7 +717,7 @@ function ButkaUz() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.15, duration: 0.8 }}
                                     viewport={{ once: true }}
-                                    className="p-8 bg-white/80 rounded-2xl shadow-lg border-l-6 border-blue-400 hover:shadow-xl transition-all duration-300"
+                                    className="p-3 lg:p-6 bg-white/80 rounded-2xl shadow-lg border-l-6 border-blue-400 hover:shadow-xl transition-all duration-300"
                                 >
                                     <div className="flex items-start space-x-4">
                                         <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
@@ -735,7 +735,7 @@ function ButkaUz() {
                 <motion.section className="py-20">
                     <InfoCard variant="default">
                         <SectionHeader variant="primary" className="flex items-center justify-center gap-4">
-                            <Phone className="w-16 h-16 text-blue-600" />
+                            <Phone className="hidden lg:inline-flex w-16 h-16 text-blue-600" />
                             Biz bilan bog'laning
                         </SectionHeader>
 
@@ -766,11 +766,11 @@ function ButkaUz() {
                                         <div className="space-y-6">
                                             <motion.a
                                                 href="tel:+998787777557"
-                                                className="flex items-center gap-6 p-6 bg-white/90 rounded-2xl hover:bg-white transition-all duration-300 group shadow-lg"
+                                                className="flex items-center gap-6 p-4 md:p-6 bg-white/90 rounded-2xl hover:bg-white transition-all duration-300 group shadow-lg"
                                                 whileHover={{ scale: 1.03, x: 5 }}
                                                 whileTap={{ scale: 0.97 }}
                                             >
-                                                <div className="p-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl shadow-lg">
+                                                <div className="hidden lg:inline-flex p-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl shadow-lg">
                                                     <Phone className="w-7 h-7 text-white" />
                                                 </div>
                                                 <div>
@@ -789,7 +789,7 @@ function ButkaUz() {
                                     viewport={{ once: true }}
                                 >
                                     <InfoCard variant="accent" className="h-full">
-                                        <h3 className="text-3xl font-bold text-navy-800 mb-8 text-center">
+                                        <h3 className="flex flex-col justify-center text-3xl font-bold text-navy-800 mb-8 text-center">
                                             <span className='flex items-center'><MapPin className="w-7 h-7 text-indigo-600 ml-9 md:ml-[130px]" /> Bizning</span> joylashuvimiz
                                         </h3>
 
