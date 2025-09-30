@@ -358,25 +358,25 @@ function ButkaUz() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
-                                icon: '📞',
+                                // icon: '📞',
                                 title: 'Maslahat',
                                 desc: 'Professional menejerlarimiz sizning ehtiyojlaringizni batafsil o\'rganib, eng optimal yechimni taklif qiladi.',
                                 step: '01'
                             },
                             {
-                                icon: '🎯',
+                                // icon: '🎯',
                                 title: 'Loyihalash',
                                 desc: 'Malakali muhandislar tomonidan sizning talablaringizga moslashtirilgan loyiha ishlab chiqiladi.',
                                 step: '02'
                             },
                             {
-                                icon: '⚙️',
+                                // icon: '⚙️',
                                 title: 'Ishlab chiqarish',
                                 desc: 'Zamonaviy uskunalar yordamida yuqori sifat nazorati ostida mahsulot tayyorlanadi.',
                                 step: '03'
                             },
                             {
-                                icon: '🚀',
+                                // icon: '🚀',
                                 title: 'Yetkazib berish',
                                 desc: 'Professional o\'rnatish jamoasi mahsulotni belgilangan vaqtda sifatli tarzda yetkazib beradi.',
                                 step: '04'
@@ -393,7 +393,7 @@ function ButkaUz() {
                                     <div className="absolute top-4 right-4 text-4xl font-bold text-blue-200/50">
                                         {step.step}
                                     </div>
-                                    <div className="text-6xl mb-6">{step.icon}</div>
+                                    {/* <div className="text-6xl mb-6">{step.icon}</div> */}
                                     <h3 className="text-2xl font-bold mb-4 text-navy-800">{step.title}</h3>
                                     <p className='text-slate-600 leading-relaxed text-base'>{step.desc}</p>
                                 </InfoCard>
@@ -790,7 +790,7 @@ function ButkaUz() {
                                 >
                                     <InfoCard variant="accent" className="h-full">
                                         <h3 className="flex flex-col justify-center text-3xl font-bold text-navy-800 mb-8 text-center">
-                                            <span className='flex items-center'><MapPin className="w-7 h-7 text-indigo-600 ml-9 md:ml-[130px]" /> Bizning</span> joylashuvimiz
+                                            <span className='flex items-center'><MapPin className="w-7 h-7 text-indigo-600 ml-16 md:ml-[130px]" /> Bizning</span> joylashuvimiz
                                         </h3>
 
                                         <div className="flex items-start gap-6 p-6 bg-white/90 rounded-2xl shadow-lg">
@@ -828,8 +828,8 @@ function ButkaUz() {
                                             Buyurtma bering
                                         </div>
                                     </CTAButton>
-                                    <CTAButton href="https://t.me/kontainer_city" variant="outline">
-                                        Bepul konsultatsiya
+                                    <CTAButton href="https://t.me/butkadokonlaruz" variant="outline">
+                                        Ko'proq ma'lumot
                                     </CTAButton>
                                 </div>
                             </motion.div>
