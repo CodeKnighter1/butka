@@ -135,7 +135,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
         gradient: "bg-gradient-to-br from-white/95 via-blue-50/30 to-slate-50/40 backdrop-blur-md shadow-2xl hover:shadow-blue-200/20 border border-blue-100/30 p-6 lg:p-10",
         accent: "bg-gradient-to-br from-blue-50/80 to-white/90 backdrop-blur-sm shadow-xl hover:shadow-blue-200/25 border border-blue-200/30 p-3 lg:p-6",
         glass: "bg-white/20 backdrop-blur-lg shadow-xl border border-white/30 hover:bg-white/30 p-8",
-        navy: "bg-gradient-to-br from-navy-800 to-blue-900 text-white shadow-2xl hover:shadow-blue-900/30 p-10"
+        navy: "bg-gradient-to-br from-blue-800 to-blue-900 text-white shadow-2xl hover:shadow-blue-900/30 p-10"
     };
 
     return (
@@ -358,25 +358,21 @@ function ButkaUz() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
-                                // icon: '📞',
                                 title: 'Maslahat',
                                 desc: 'Professional menejerlarimiz sizning ehtiyojlaringizni batafsil o\'rganib, eng optimal yechimni taklif qiladi.',
                                 step: '01'
                             },
                             {
-                                // icon: '🎯',
                                 title: 'Loyihalash',
                                 desc: 'Malakali muhandislar tomonidan sizning talablaringizga moslashtirilgan loyiha ishlab chiqiladi.',
                                 step: '02'
                             },
                             {
-                                // icon: '⚙️',
                                 title: 'Ishlab chiqarish',
                                 desc: 'Zamonaviy uskunalar yordamida yuqori sifat nazorati ostida mahsulot tayyorlanadi.',
                                 step: '03'
                             },
                             {
-                                // icon: '🚀',
                                 title: 'Yetkazib berish',
                                 desc: 'Professional o\'rnatish jamoasi mahsulotni belgilangan vaqtda sifatli tarzda yetkazib beradi.',
                                 step: '04'
