@@ -326,11 +326,11 @@ function ButkaUz() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1, duration: 0.8 }}
                     >
-                        O'zbekiston bozoridagi eng ilg'or va ishonchli metall konstruksiya fabrikasi.
+                        O'zbekiston bozoridagi eng ilg'or va ishonchli fabrika.
                         8 yillik tajriba va minglab mamnun mijozlar.
                     </motion.p>
 
-                    <motion.div
+                    {/* <motion.div
                         className="flex flex-col sm:flex-row gap-6 justify-center"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -346,7 +346,7 @@ function ButkaUz() {
                         <CTAButton href="https://t.me/butkadokonlaruz" variant="outline">
                             Batafsil Ma'lumot
                         </CTAButton>
-                    </motion.div>
+                    </motion.div> */}
                 </motion.div>
 
                 {/* Process Steps */}
@@ -402,7 +402,7 @@ function ButkaUz() {
                 <motion.section className="py-6 md:py-12">
                     <InfoCard variant="gradient">
                         <SectionHeader variant="primary">
-                            Bizning professional ishlarimiz
+                            Bizning ishlarimiz
                         </SectionHeader>
 
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12'>
@@ -484,11 +484,11 @@ function ButkaUz() {
                             Nima uchun BUTKA?
                         </SectionHeader>
 
-                        <div className="grid md:grid-cols-2 gap-8">
+                        <div className="grid md:grid-cols-2">
                             {COMPANY_ADVANTAGES.map((advantage, index) => (
                                 <motion.div
                                     key={index}
-                                    className="flex items-start space-x-4 p-6 rounded-2xl hover:bg-blue-50/80 transition-all duration-300"
+                                    className="flex items-start space-x-4 px-6 py-4 rounded-2xl hover:bg-blue-50/80 transition-all duration-300"
                                     initial={{ opacity: 0, x: -40 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.1, duration: 0.6 }}
@@ -510,7 +510,7 @@ function ButkaUz() {
                     <InfoCard variant="accent">
                         <SectionHeader variant="primary" className="flex items-center justify-center gap-4">
                             <TrendingUp className="w-16 h-16 text-blue-600" />
-                            Butka Do'konning asosiy afzalliklarimiz
+                            Butka Do'konning asosiy afzalliklari
                         </SectionHeader>
 
                         <div className="grid md:grid-cols-2 gap-10">
@@ -527,14 +527,14 @@ function ButkaUz() {
                                     >
                                         <InfoCard variant="glass" className="h-full">
                                             <div className="flex items-start space-x-6">
-                                                <div className={`p-5 rounded-3xl bg-gradient-to-r ${feature.color} shadow-2xl`}>
+                                                <div className={`p-5 hidden lg:inline-block rounded-3xl bg-gradient-to-r ${feature.color} shadow-2xl`}>
                                                     <IconComponent className="w-8 h-8 text-white" />
                                                 </div>
                                                 <div className="flex-1">
-                                                    <h4 className="text-2xl font-bold text-navy-800 mb-4">
+                                                    <h4 className="text-2xl font-bold text-navy-800 mb-3">
                                                         {feature.title}
                                                     </h4>
-                                                    <p className="text-slate-600 leading-relaxed text-lg">
+                                                    <p className="text-slate-600 leading-relaxed text-lg font-bold">
                                                         {feature.description}
                                                     </p>
                                                 </div>
@@ -550,7 +550,7 @@ function ButkaUz() {
                 {/* FAQ Section */}
                 <motion.section className="py-6 md:py-12">
                     <InfoCard variant="gradient">
-                        <SectionHeader variant="secondary">Tez-tez so'raladigan savollar</SectionHeader>
+                        <SectionHeader variant="secondary">Ko'p beriladigan savollar</SectionHeader>
                         <div className="space-y-8">
                             {[
                                 {
@@ -583,7 +583,7 @@ function ButkaUz() {
                                         <span className="text-blue-500 mr-3 text-2xl">Q:</span>
                                         {faq.q}
                                     </h3>
-                                    <p className="text-slate-600 ml-8 leading-relaxed text-lg">
+                                    <p className="text-slate-600 ml-8 leading-relaxed text-lg font-bold">
                                         <span className="text-blue-500 mr-3 text-2xl">A:</span>
                                         {faq.a}
                                     </p>
@@ -618,7 +618,7 @@ function ButkaUz() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ delay: index * 0.3, duration: 0.8 }}
                                         viewport={{ once: true }}
-                                        className="p-6 bg-blue-50/50 rounded-2xl border-l-4 border-blue-500"
+                                        className="p-6 bg-blue-50/50 rounded-2xl border-l-4 border-blue-500 font-bold"
                                     >
                                         {text}
                                     </motion.p>
@@ -650,7 +650,7 @@ function ButkaUz() {
                                             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-blue-500 flex items-center justify-center flex-shrink-0">
                                                 <CheckCircle className="w-5 h-5 text-white" />
                                             </div>
-                                            <span className="text-blue-100 text-lg leading-relaxed">{service}</span>
+                                            <span className="text-blue-100 text-lg leading-relaxed font-semibold">{service}</span>
                                         </motion.div>
                                     ))}
                                 </div>
@@ -691,7 +691,7 @@ function ButkaUz() {
                                         <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
                                             <span className="text-white font-bold text-sm">{index + 1}</span>
                                         </div>
-                                        <p className="text-slate-700">{text}</p>
+                                        <p className="text-slate-700 font-bold">{text}</p>
                                     </div>
                                 </motion.div>
                             ))}
