@@ -1,6 +1,6 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import { useMemo, useState, useEffect } from 'react';
-import { Award, CheckCircle, MapPin, Phone, TrendingUp, Users2, ChevronUp, Instagram, Facebook, Building2, Zap, Shield, Sparkles } from 'lucide-react';
+import { Award, CheckCircle, MapPin, Phone, TrendingUp, ChevronUp, Instagram, Facebook, Building2, Zap, Shield, Sparkles } from 'lucide-react';
 import logo from '@/images/logo.jpg'
 import telegram_logo from "@/images/icons8-telegram-48.png"
 import youtube_l from '@/images/icons8-youtube-48 (1).png'
@@ -267,7 +267,7 @@ function ButkaUz() {
     const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
 
     return (
-        <div className='w-full min-h-screen relative' style={{
+        <div className='w-full min-h-screen overflow-hidden relative' style={{
             '--navy-700': '#1e3a5f',
             '--navy-800': '#1e40af',
             '--navy-900': '#1e3a8a'
@@ -278,7 +278,7 @@ function ButkaUz() {
             <div className="container mx-auto relative z-10 px-3 md:px-6">
                 {/* Hero Section */}
                 <motion.div
-                    className="text-center py-20 mt-8"
+                    className="text-center py-6 md:py-12 mt-8"
                     initial={variants.fadeInUp.initial}
                     animate={variants.fadeInUp.animate}
                     transition={variants.fadeInUp.transition}
@@ -321,7 +321,7 @@ function ButkaUz() {
                     </motion.p>
 
                     <motion.p
-                        className="text-lg md:text-xl text-slate-600 mb-16 max-w-3xl mx-auto"
+                        className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1, duration: 0.8 }}
@@ -350,7 +350,7 @@ function ButkaUz() {
                 </motion.div>
 
                 {/* Process Steps */}
-                <motion.section className="py-20">
+                <motion.section className="py-6 md:py-12">
                     <SectionHeader variant="secondary">
                         Professional ishlab chiqarish jarayoni
                     </SectionHeader>
@@ -399,7 +399,7 @@ function ButkaUz() {
                 </motion.section>
 
                 {/* Video Section */}
-                <motion.section className="py-20">
+                <motion.section className="py-6 md:py-12">
                     <InfoCard variant="gradient">
                         <SectionHeader variant="primary">
                             Bizning professional ishlarimiz
@@ -441,7 +441,7 @@ function ButkaUz() {
                 </motion.section>
 
                 {/* Social Media Section */}
-                <motion.section className="py-20">
+                <motion.section className="py-6 md:py-12">
                     <InfoCard variant="navy">
                         <SectionHeader className="text-white mb-8">
                             Bizni ijtimoiy tarmoqlarda kuzatib boring
@@ -471,14 +471,13 @@ function ButkaUz() {
                                     <img src={youtube_l} alt="you tube logo" className='w-7 h-7' />
                                     YouTube
                                 </div>
-
                             </CTAButton>
                         </div>
                     </InfoCard>
                 </motion.section>
 
                 {/* Company Advantages */}
-                <motion.section className="py-20">
+                <motion.section className="py-6 md:py-12">
                     <InfoCard variant="default">
                         <SectionHeader variant="secondary" className="flex items-center justify-center gap-4">
                             <Award className="w-16 h-16 text-blue-600" />
@@ -507,7 +506,7 @@ function ButkaUz() {
                 </motion.section>
 
                 {/* Key Features */}
-                <motion.section className="py-20">
+                <motion.section className="py-6 md:py-12">
                     <InfoCard variant="accent">
                         <SectionHeader variant="primary" className="flex items-center justify-center gap-4">
                             <TrendingUp className="w-16 h-16 text-blue-600" />
@@ -549,7 +548,7 @@ function ButkaUz() {
                 </motion.section>
 
                 {/* FAQ Section */}
-                <motion.section className="py-20">
+                <motion.section className="py-6 md:py-12">
                     <InfoCard variant="gradient">
                         <SectionHeader variant="secondary">Tez-tez so'raladigan savollar</SectionHeader>
                         <div className="space-y-8">
@@ -595,7 +594,7 @@ function ButkaUz() {
                 </motion.section>
 
                 {/* About Section */}
-                <motion.section className="py-20">
+                <motion.section className="py-6 md:py-12">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -60 }}
@@ -661,38 +660,11 @@ function ButkaUz() {
                 </motion.section>
 
                 {/* Statistics */}
-                <motion.section className="py-20">
+                <motion.section className="py-6 md:py-12">
                     <InfoCard variant="gradient">
                         <SectionHeader variant="secondary">
                             Bizning <span className="text-blue-600">Yutuqlarimiz</span>
                         </SectionHeader>
-
-                        {/* <div className="grid md:grid-cols-3 gap-10 mb-16">
-                            {[
-                                { icon: TrendingUp, label: "Yillik o'sish sur'ati", value: "25%+", color: "from-blue-500 to-blue-600" },
-                                { icon: Award, label: "2025-yil rejasi", value: "1000+", color: "from-indigo-600 to-indigo-500" },
-                                { icon: Users2, label: "Malakali mutaxasislar", value: "100+", color: "from-blue-400 to-blue-500" }
-                            ].map((stat, index) => {
-                                const IconComponent = stat.icon;
-                                return (
-                                    <motion.div
-                                        key={stat.label}
-                                        className="text-center p-8 bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-blue-100/50"
-                                        initial={{ opacity: 0, scale: 0.7 }}
-                                        whileInView={{ opacity: 1, scale: 1 }}
-                                        transition={{ delay: index * 0.2, duration: 0.8 }}
-                                        viewport={{ once: true }}
-                                        whileHover={{ scale: 1.05, y: -5 }}
-                                    >
-                                        <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${stat.color} flex items-center justify-center shadow-lg`}>
-                                            <IconComponent className="w-8 h-8 text-white" />
-                                        </div>
-                                        <div className="text-4xl font-bold text-navy-800 mb-3">{stat.value}</div>
-                                        <div className="text-slate-600 font-semibold">{stat.label}</div>
-                                    </motion.div>
-                                );
-                            })}
-                        </div> */}
 
                         <motion.div
                             className="space-y-8 text-slate-700 leading-relaxed text-lg"
@@ -728,7 +700,7 @@ function ButkaUz() {
                 </motion.section>
 
                 {/* Contact Section */}
-                <motion.section className="py-20">
+                <motion.section className="py-6 md:py-12">
                     <InfoCard variant="default">
                         <SectionHeader variant="primary" className="flex items-center justify-center gap-4">
                             <Phone className="hidden lg:inline-flex w-16 h-16 text-blue-600" />
